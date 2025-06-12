@@ -1,0 +1,10 @@
+C:\Users\Estudiante\Documents\Práctica 20250612 vespertino\Cálculo de promedios\Cálculo de promedios\bin\Debug\Cálculo de promedios.exe.config
+C:\Users\Estudiante\Documents\Práctica 20250612 vespertino\Cálculo de promedios\Cálculo de promedios\bin\Debug\Cálculo de promedios.exe
+C:\Users\Estudiante\Documents\Práctica 20250612 vespertino\Cálculo de promedios\Cálculo de promedios\bin\Debug\Cálculo de promedios.pdb
+C:\Users\Estudiante\Documents\Práctica 20250612 vespertino\Cálculo de promedios\Cálculo de promedios\obj\Debug\Cálculo de promedios.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Documents\Práctica 20250612 vespertino\Cálculo de promedios\Cálculo de promedios\obj\Debug\Cálculo_de_promedios.frmSistemaDeNotasITR.resources
+C:\Users\Estudiante\Documents\Práctica 20250612 vespertino\Cálculo de promedios\Cálculo de promedios\obj\Debug\Cálculo_de_promedios.Properties.Resources.resources
+C:\Users\Estudiante\Documents\Práctica 20250612 vespertino\Cálculo de promedios\Cálculo de promedios\obj\Debug\Cálculo de promedios.csproj.GenerateResource.cache
+C:\Users\Estudiante\Documents\Práctica 20250612 vespertino\Cálculo de promedios\Cálculo de promedios\obj\Debug\Cálculo de promedios.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\Documents\Práctica 20250612 vespertino\Cálculo de promedios\Cálculo de promedios\obj\Debug\Cálculo de promedios.exe
+C:\Users\Estudiante\Documents\Práctica 20250612 vespertino\Cálculo de promedios\Cálculo de promedios\obj\Debug\Cálculo de promedios.pdb
