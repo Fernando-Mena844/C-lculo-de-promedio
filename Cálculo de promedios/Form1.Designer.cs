@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSistemaDeNotasITR));
             this.gbRegistroNotas = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtNota3 = new System.Windows.Forms.TextBox();
             this.txtNota2 = new System.Windows.Forms.TextBox();
             this.txtNota1 = new System.Windows.Forms.TextBox();
@@ -42,15 +43,14 @@
             this.txtPromedio = new System.Windows.Forms.TextBox();
             this.lblPromedio = new System.Windows.Forms.Label();
             this.gbAcciones = new System.Windows.Forms.GroupBox();
-            this.btnNuevoRegistro = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAgregarPromedio = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnNuevoRegistro = new System.Windows.Forms.Button();
             this.tlpAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.gbRegistroNotas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbPromedio.SuspendLayout();
             this.gbAcciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbRegistroNotas
@@ -65,10 +65,20 @@
             this.gbRegistroNotas.Controls.Add(this.lblNota1);
             this.gbRegistroNotas.Location = new System.Drawing.Point(27, 31);
             this.gbRegistroNotas.Name = "gbRegistroNotas";
-            this.gbRegistroNotas.Size = new System.Drawing.Size(419, 236);
+            this.gbRegistroNotas.Size = new System.Drawing.Size(879, 236);
             this.gbRegistroNotas.TabIndex = 0;
             this.gbRegistroNotas.TabStop = false;
             this.gbRegistroNotas.Text = "Registro de Notas";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cálculo_de_promedios.Properties.Resources.icons8_usuario_100;
+            this.pictureBox1.Location = new System.Drawing.Point(341, 57);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(84, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // txtNota3
             // 
@@ -97,12 +107,11 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblError.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(3, 209);
+            this.lblError.Location = new System.Drawing.Point(35, 194);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(68, 24);
+            this.lblError.Size = new System.Drawing.Size(52, 19);
             this.lblError.TabIndex = 2;
             this.lblError.Text = "Error";
             // 
@@ -139,7 +148,7 @@
             this.gbPromedio.Controls.Add(this.lblPromedio);
             this.gbPromedio.Location = new System.Drawing.Point(27, 322);
             this.gbPromedio.Name = "gbPromedio";
-            this.gbPromedio.Size = new System.Drawing.Size(666, 134);
+            this.gbPromedio.Size = new System.Drawing.Size(908, 237);
             this.gbPromedio.TabIndex = 1;
             this.gbPromedio.TabStop = false;
             this.gbPromedio.Text = "Promedio";
@@ -147,6 +156,7 @@
             // txtPromedio
             // 
             this.txtPromedio.Location = new System.Drawing.Point(152, 83);
+            this.txtPromedio.Multiline = true;
             this.txtPromedio.Name = "txtPromedio";
             this.txtPromedio.ReadOnly = true;
             this.txtPromedio.Size = new System.Drawing.Size(232, 20);
@@ -166,23 +176,12 @@
             this.gbAcciones.Controls.Add(this.btnSalir);
             this.gbAcciones.Controls.Add(this.btnAgregarPromedio);
             this.gbAcciones.Controls.Add(this.btnNuevoRegistro);
-            this.gbAcciones.Location = new System.Drawing.Point(461, 40);
+            this.gbAcciones.Location = new System.Drawing.Point(952, 31);
             this.gbAcciones.Name = "gbAcciones";
-            this.gbAcciones.Size = new System.Drawing.Size(232, 227);
+            this.gbAcciones.Size = new System.Drawing.Size(243, 236);
             this.gbAcciones.TabIndex = 0;
             this.gbAcciones.TabStop = false;
             this.gbAcciones.Text = "Acciones";
-            // 
-            // btnNuevoRegistro
-            // 
-            this.btnNuevoRegistro.Image = global::Cálculo_de_promedios.Properties.Resources.icons8_escoba_48;
-            this.btnNuevoRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevoRegistro.Location = new System.Drawing.Point(12, 94);
-            this.btnNuevoRegistro.Name = "btnNuevoRegistro";
-            this.btnNuevoRegistro.Size = new System.Drawing.Size(198, 47);
-            this.btnNuevoRegistro.TabIndex = 3;
-            this.btnNuevoRegistro.Text = "Nuevo Registro";
-            this.btnNuevoRegistro.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
@@ -194,6 +193,7 @@
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnAgregarPromedio
             // 
@@ -205,16 +205,19 @@
             this.btnAgregarPromedio.TabIndex = 3;
             this.btnAgregarPromedio.Text = "Agregar Promedio";
             this.btnAgregarPromedio.UseVisualStyleBackColor = true;
+            this.btnAgregarPromedio.Click += new System.EventHandler(this.btnAgregarPromedio_Click);
             // 
-            // pictureBox1
+            // btnNuevoRegistro
             // 
-            this.pictureBox1.Image = global::Cálculo_de_promedios.Properties.Resources.icons8_usuario_100;
-            this.pictureBox1.Location = new System.Drawing.Point(329, 60);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.btnNuevoRegistro.Image = global::Cálculo_de_promedios.Properties.Resources.icons8_escoba_48;
+            this.btnNuevoRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevoRegistro.Location = new System.Drawing.Point(12, 94);
+            this.btnNuevoRegistro.Name = "btnNuevoRegistro";
+            this.btnNuevoRegistro.Size = new System.Drawing.Size(198, 47);
+            this.btnNuevoRegistro.TabIndex = 3;
+            this.btnNuevoRegistro.Text = "Nuevo Registro";
+            this.btnNuevoRegistro.UseVisualStyleBackColor = true;
+            this.btnNuevoRegistro.Click += new System.EventHandler(this.btnNuevoRegistro_Click);
             // 
             // tlpAyuda
             // 
@@ -226,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 483);
+            this.ClientSize = new System.Drawing.Size(1281, 655);
             this.Controls.Add(this.gbPromedio);
             this.Controls.Add(this.gbAcciones);
             this.Controls.Add(this.gbRegistroNotas);
@@ -235,10 +238,10 @@
             this.Text = "Sistema de Notas ITR";
             this.gbRegistroNotas.ResumeLayout(false);
             this.gbRegistroNotas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbPromedio.ResumeLayout(false);
             this.gbPromedio.PerformLayout();
             this.gbAcciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
